@@ -1,5 +1,13 @@
 import { useState } from "react";
 import mqtt from "mqtt";
+import {
+	IconArrowUp,
+	IconArrowLeft,
+	IconArrowRight,
+	IconArrowDown,
+	IconPlayerStop,
+} from "@tabler/icons-react";
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
@@ -41,37 +49,52 @@ function App() {
 
 	return (
 		<>
-			<header>
-				<h1>MQTT EMQX</h1>
-			</header>
+			<Header />
 			<main>
-				<section>
+				<section className="botones">
 					{isConnected ? <h2>Carrito</h2> : <h2>Conectando...</h2>}
-					<div className="botones">
-						<button
-							onClick={() => publishMessage("adelante")}
-							disabled={!isConnected}
-						>
-							Avanzar
-						</button>
-						<button
-							onClick={() => publishMessage("atras")}
-							disabled={!isConnected}
-						>
-							Retroceder
-						</button>
-						<button
-							onClick={() => publishMessage("izquierda")}
-							disabled={!isConnected}
-						>
-							Girar a la izquierda
-						</button>
-						<button
-							onClick={() => publishMessage("derecha")}
-							disabled={!isConnected}
-						>
-							Girar a la derecha
-						</button>
+					<div className="botones__grid">
+						<div className="botones__row">
+							<button
+								onClick={() => publishMessage("adelante")}
+								disabled={!isConnected}
+								title="adelante"
+							>
+								<IconArrowUp />
+							</button>
+						</div>
+						<div className="botones__row">
+							<button
+								title="izquierda"
+								onClick={() => publishMessage("izquierda")}
+								disabled={!isConnected}
+							>
+								<IconArrowLeft />
+							</button>
+							<button
+								onClick={() => publishMessage("detener")}
+								disabled={!isConnected}
+								title="detener"
+							>
+								<IconPlayerStop />
+							</button>
+							<button
+								onClick={() => publishMessage("derecha")}
+								disabled={!isConnected}
+								title="derecha"
+							>
+								<IconArrowRight />
+							</button>
+						</div>
+						<div className="botones__row">
+							<button
+								onClick={() => publishMessage("atras")}
+								disabled={!isConnected}
+								title="atras"
+							>
+								<IconArrowDown />
+							</button>
+						</div>
 					</div>
 				</section>
 			</main>

@@ -5,6 +5,16 @@
 	text-align: center;
 }
 
-.botones button:not(button:last-of-type) {
-	margin-right: 1rem;
+.botones {
+	margin-top: 4rem;
+}
+.botones__grid {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.botones__row {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
 }

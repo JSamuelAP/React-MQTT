@@ -23,12 +23,3 @@ La página se conecta a un broker MQTT creado en [EMQX Cloud](https://www.emqx.c
 ### Paquetes utilizados
 
 - [mqtt](https://www.npmjs.com/package/mqtt)
-
-## Instalación y uso
-
-Ejecute los siguentes comandos:
-
-```bash
-npm install
-npm run dev
-```
