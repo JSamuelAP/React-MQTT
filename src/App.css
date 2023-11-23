@@ -5,9 +5,11 @@
 	text-align: center;
 }
 
-.botones {
-	margin-top: 4rem;
+main {
+	display: flex;
+	justify-content: space-evenly;
 }
+
 .botones__grid {
 	display: flex;
 	flex-direction: column;
@@ -17,4 +19,30 @@
 	display: flex;
 	justify-content: center;
 	gap: 1rem;
+}
+
+.camara__input-ip {
+	width: 100%;
+	padding: 0.5rem 0.25rem;
+	margin: 0.5rem 0 1rem;
+}
+
+.camara__boton {
+	width: 100%;
+}
+
+.camara__resultado {
+	margin-top: 2rem;
+}
+
+.camara__foto {
+	border-radius: 8px;
+	max-width: 250px;
+}
+
+.camara__error {
+	background-color: rgba(255, 0, 0, 0.1);
+	border: 2px solid rgb(87, 29, 29);
+	border-radius: 4px;
+	padding: 0.5rem 0.25rem;
 }

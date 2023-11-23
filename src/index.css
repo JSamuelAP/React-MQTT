@@ -49,7 +49,8 @@ button {
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
-button:hover {
+button:hover,
+input:hover {
 	border-color: #ffb764;
 }
 button:focus,
